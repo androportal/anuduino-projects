@@ -19,7 +19,7 @@ Schematic
 Circuit Diagram
 ---------------
 
-.. image:: images/SWITCH_bb.png
+.. image:: ../images/SWITCH_bb.png
 
 
 

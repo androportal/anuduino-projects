@@ -21,13 +21,13 @@ Component required
 Schematic
 ----------
 
-.. image:: images/LEDBlink_1_bb.png
+.. image:: ../images/LEDBlink_1_bb.png
 	:scale: 140 %
 
 Circuit Diagram
 ----------------
 
-.. image:: images/LEDblink_1_bb.png
+.. image:: ../images/LEDblink_1_bb.png
 	:scale: 60 %
 
 Anuduino source
