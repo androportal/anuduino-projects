@@ -20,7 +20,7 @@ Schematic
 ---------
 
 
-.. image:: ../anuduino-projects/images/Twisting-potentiometer_schem.jpg
+.. image:: ../images/Twisting-potentiometer_schem.jpg
 
 
 
@@ -28,7 +28,7 @@ Schematic
 Circuit Diagram
 ---------------
 
-.. image:: ../anuduino-projects/images/Twisting-potentiometer_bb.png
+.. image:: ../images/Twisting-potentiometer_bb.png
 
 
 
