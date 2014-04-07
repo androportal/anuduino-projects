@@ -14,6 +14,7 @@ Components reqiured
 Schematic
 ---------
 
+.. image:: ../images/SWITCH_schem.png
 
 
 Circuit Diagram
