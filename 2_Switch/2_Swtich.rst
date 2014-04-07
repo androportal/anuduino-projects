@@ -4,10 +4,10 @@ Switch button interfacing with Anuduino
 Components reqiured
 -------------------
 
-- Breadbord  *1
-- Pushbutton *1
-- Resistor   *1K
-- LED        *1
+- Breadbord        X1
+- Pushbutton      X1
+- Resistor (1K)    X1
+- LED                        X1
 - Wires
 
 
