@@ -28,7 +28,7 @@ Schematic
 Circuit Diagram
 ---------------
 
-.. image:: ../images/Twisting-potentiometer_bb.png
+.. image:: ../images/3_PWM-anuduino_bb.png
 
 
 
