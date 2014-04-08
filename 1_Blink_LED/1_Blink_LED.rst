@@ -33,7 +33,7 @@ Circuit Diagram
 ----------------
 
 .. image:: ../images/1_Blink_LED_bb.png
-	:scale: 30 %
+	:scale: 50 %
 
 Anuduino source
 ---------------
