@@ -4,7 +4,12 @@ Blink LED
 Overview of the experiment
 --------------------------
 
- LEDs (light emitting diodes) are used in all sorts of clever things which is why we have induced them in the kit. We will start off with something very simple, turning one on and off,repeatedly,producing a pleasant blinking effect. To get started, grab the parts listed below and assemble the circuit. Once the circuit is assembled you will need to upload the program on Attiny85. To upload the program plug your Anuduino into your USB port. Then select the proper board in Tools>Board>anuduino, and select the programmer in Tools>Programmer>Anuduino. Next upload the program by going to File>Upload*(ctrl+U). finally, ou will get the pleasant blinking effect.
+LEDs (light emitting diodes) are used in all sorts of clever things which is why we have induced them in the kit.
+We will start off with something very simple, turning one ON and OFF, repeatedly,producing a pleasant blinking 
+effect.To get started, grab the parts listed below and assemble the circuit. Once the circuit is assembled you will 
+need to upload the program on Attiny85. To upload the program plug your Anuduino into your USB port. Then select 
+the proper board in Tools>Board>anuduino, and select the programmer in Tools>Programmer>Anuduino.Next upload
+the program by going to File>Upload*(ctrl+U). finally, ou will get the pleasant blinking effect.
 
 
 Component required
@@ -15,13 +20,13 @@ Component required
 - LED x 1
 - Resistor(1K) x 1
 - Wires
-- Powesupply (5V)
+- Power supply (5V)
 
 
 Schematic
 ----------
 
-.. image:: ../images/LEDBlink_1_bb.png
+.. image:: ../images/LEDBlink_1_schem.png
 	:scale: 140 %
 
 Circuit Diagram
