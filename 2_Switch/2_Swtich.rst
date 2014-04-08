@@ -33,13 +33,13 @@ Code
    Button
  
    Turns on and off a light emitting diode(LED) connected to digital  
-   pin 0, when pressing a pushbutton attached to pin 1. 
+   pin 1, when pressing a pushbutton attached to pin 0. 
  
  
    The circuit:
   * LED attached from pin 1 to ground 
-  * pushbutton attached to pin o from +5V
-  * 10K resistor attached to pin 0 from ground
+  * pushbutton attached to pin 0 from +5V
+  * push button is connected to ground through 1k resistor
  
   */
    // constants won't change. They're used here to 
