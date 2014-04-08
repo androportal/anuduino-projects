@@ -1,8 +1,8 @@
 /*
   Button
  
- Turns on and off a light emitting diode(LED) connected to digital  
- pin 0, when pressing a pushbutton attached to pin 1. 
+ Turns on and off a light emitting diode(LED) connected to  
+ pin 1, when pressing a pushbutton attached to pin 0. 
  
  
  The circuit:
