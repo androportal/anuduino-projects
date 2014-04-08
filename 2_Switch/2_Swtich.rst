@@ -14,13 +14,13 @@ Components reqiured
 Schematic
 ---------
 
-.. image:: ../images/SWITCH_schem.png
+.. image:: ../images/2_SWITCH_schem.png
 
 
 Circuit Diagram
 ---------------
 
-.. image:: ../images/SWITCH_bb.png
+.. image:: ../images/2_SWITCH_bb.png
 
 
 
