@@ -10,11 +10,13 @@ Anuduino has 3 analog pins which can be used for analog input. These inputs take
 Components required
 -------------------
 
-- Breadboard          	         X1
-- Attiny85   	                 X1
-- LED       	                         X1
+- Breadboard          X1
+- Attiny85   	      X1
+- LED       	          X1
 - Potentiometer(10k)  X1
-- Resistor(470 ohm)      X1
+- Resistor(470 ohm)   X1
+- Powersupply(5V)
+
 
 Schematic
 ---------

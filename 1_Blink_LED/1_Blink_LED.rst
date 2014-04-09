@@ -15,12 +15,12 @@ the program by going to File>Upload*(ctrl+U). finally, ou will get the pleasant 
 Component required
 -------------------
 
-- Breadboard x 1
-- Attiny85 x 1
-- LED x 1
-- Resistor(1K) x 1
+- Breadboard   x1
+- Attiny85     x1
+- LED          x1
+- Resistor(1K) x1
 - Wires
-- Power supply (5V)
+- Powersupply(5V)
 
 
 Schematic

@@ -12,10 +12,11 @@ Components reqiured
 -------------------
 
 - Breadbord        X1
-- Pushbutton      X1
+- Pushbutton       X1
 - Resistor (1K)    X1
-- LED                        X1
+- LED              X1
 - Wires
+- Powersupply(5V)
 
 
 Schematic

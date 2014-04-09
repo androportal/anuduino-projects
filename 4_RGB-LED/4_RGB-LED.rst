@@ -14,11 +14,11 @@ colours through RGB-LED.
 Components required
 -------------------
 
-Breadboard       x1
-Attiny85         x1
-RGB-LED          x1
-Resistor(220ohm) x3
-Powersupply(5V)
+- Breadboard       x1
+- Attiny85         x1
+- RGB-LED          x1
+- Resistor(220ohm) x3
+- Powersupply(5V)
 
 
 Schematic
