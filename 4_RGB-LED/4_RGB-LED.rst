@@ -30,7 +30,7 @@ Schematic
 Circuit diagram
 ---------------
 
-..image:: ../images/4_RGB-LED_bb.png
+.. image:: ../images/4_RGB-LED_bb.png
 
 
 Code
