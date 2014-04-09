@@ -27,7 +27,7 @@ Circuit Diagram
 Code
 ----
 
-.. code-block:: switch
+.. code-block::  c
 
    /*
    Button

@@ -36,7 +36,7 @@ Circuit Diagram
 Code
 ----
 
-.. code-block:: c
+.. code-block::  c
 
 
 	int ledPin = 1;      // LED connected to port 1
