@@ -1,6 +1,13 @@
 Switch button interfacing with Anuduino 
 =======================================
 
+Overview of the experiment
+--------------------------
+
+
+In this experiment we are going to make the Anuduino to listen and feel. We are starting with a simple push button. Wiring up the push button is simple. There is one component,the pull up resistor,that might seem out of place. This is included because Anuduino doesn't sense the same way we do (ie button pressed, button unpressed). Instead it looks at the voltage on the pin nd decides wheteher it's HIGH or LOW. The button is set up to pull the Anuduino's pin LOW when it is pressed, however,when the button is unpressed the voltage of the pin will float(causing occasional errors). To get the Anuduino to reliably read the pin as HIGH when the button is unpressed, we add the pull up resistor. 
+
+
 Components reqiured
 -------------------
 
