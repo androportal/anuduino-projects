@@ -25,14 +25,14 @@ Components required
 Schematic
 ---------
 
-.. image:: images/5_Array-of-LEDs_schem.png
+.. image:: ../images/5_Array-of-LEDs_schem.png
 
 
 
 Circuit Diagram
 ---------------
 
-.. image:: images/5_Array-of-LEDs_bb.png
+.. image:: ../images/5_Array-of-LEDs_bb.png
 
 
 Code
