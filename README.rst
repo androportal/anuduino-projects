@@ -4,11 +4,14 @@ ANUDUINO
 - What is anuduino?
 
 
-It is micro-sized, Arduino enabled, usb development board - cheap enough to jumpstart       electronics. It is easy to make Do It Yourself project either using its kicad files or on     breadboard. A two dollar arduino compatible usb development board based on ATtiny-85 microcontroller.
- 
-This repository contains tutorial to start the project from scratch. I have mentioned few example experiments, which contain three files, a fritzing file, a code file and a text document.
- 
+Anuduino is a low cost, USB based, Arduino compatible open hardware board. 
 
+     
+This repository contain sample projects. A directory name starting with a numeral contain a complete project with arduino source file, fritzing circuit file, and a quick reference manual. 
+
+One can setup Anuduino development environment using Anuduino documentation.
+
+All project files provided in this repository are licensed under GNU GPLv3, if not explicitly mentioned.   
 
 
 
