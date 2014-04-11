@@ -26,13 +26,13 @@ Components required
 Schematic 
 ---------
 
-.. image:: ../images/7_PIR-sensor_schem.png
+.. image:: ../images/7_PIR-sensor-anuduino_schem.png
 
 
 Circuit Diagram
 ---------------
 
-.. image:: ../images/7_PIR-sensor_bb.png
+.. image:: ../images/7_PIR-sensor-anuduino_bb.png
 
 
 Code
