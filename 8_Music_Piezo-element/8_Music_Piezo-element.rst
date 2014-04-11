@@ -26,13 +26,13 @@ schematic
 ---------
 
 
-..image:: ../images/8_Music_Piezo-element_schem.png
+.. image:: ../images/8_Music_Piezo-element_schem.png
 
 
 Circuit diagram
 ---------------
 
-..image:: ../images/8_Music_Piezo-element_bb.png
+.. image:: ../images/8_Music_Piezo-element_bb.png
 
 
 
