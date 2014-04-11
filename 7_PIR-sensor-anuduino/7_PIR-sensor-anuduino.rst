@@ -20,7 +20,7 @@ Components required
 - Breadboard      x1
 - PIR sensor      x1
 - LED             x1
-- Resistor(470ohm)x1
+- Resistor(220ohm)x1
 - Powersupply(5V)
 
 Schematic 
