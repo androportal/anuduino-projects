@@ -1,7 +1,7 @@
 ANUDUINO
 --------
 
-What is anuduino?
+**What is anuduino ?**
 
 
 Anuduino is a low cost, USB based, Arduino compatible open hardware board. 
@@ -15,4 +15,4 @@ All project files provided in this repository are licensed under GNU GPLv3, if n
 
 
 
-Aakash Project, IIT Bombay 
+`Aakash Project, IIT Bombay` 
