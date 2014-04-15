@@ -1,7 +1,7 @@
 ANUDUINO
 --------
 
-- What is anuduino?
+What is anuduino?
 
 
 Anuduino is a low cost, USB based, Arduino compatible open hardware board. 
