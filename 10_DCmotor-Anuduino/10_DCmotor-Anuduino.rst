@@ -6,7 +6,7 @@ Overview of the experiment
 
 The Anuduino pins are great for driving LEDs however if we hook 
 up something that requires more power, We need an external transistor.
- Here we will use a transistor to control a small DCmotor. A transistor
+Here we will use a transistor to control a small DCmotor. A transistor
 is incredibly useful. It switches a lot of current using a much smaller
 current. A transistor has 3 pins. For a negative type(NPN) transistor,
 We connect our load to collector and the emitter to ground. Then when 
