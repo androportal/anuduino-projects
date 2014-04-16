@@ -1,9 +1,8 @@
 
 	int motorPin = 0;  // define the pin the motor is connected to
-                   // (if you use pin 9,10,11 or 3you can also control speed)
-
+                  
 	/*
-	 * setup() - this function runs once when you turn your Arduino on
+	 * setup() - this function runs once when you turn your Anuduino on
 	 * We set the motors pin to be an output (turning the pin high (+5v) or low (ground) (-))
 	 * rather than an input (checking whether a pin is high or low)
 	 */
