@@ -24,13 +24,13 @@ Components required
 Schematic
 ---------
 
-.. image:: images/9_Steppermotor_schem.png
+.. image:: images/9_steppermotor_schem.png
 
 
 Circuit Diagram
 ---------------
 
-.. image:: images/9_Steppermotor_bb.png
+.. image:: images/9_steppermotor_bb.png
 
 
 Code
