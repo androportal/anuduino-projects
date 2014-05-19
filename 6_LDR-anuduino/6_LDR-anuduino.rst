@@ -39,7 +39,8 @@ Code
 
 .. code-block::  c
 
-
+    
+    // @Author_Nivedita Tigadi.//
 
     int lightPin = 2; //the analog pin the photoresistor is 
                       //connected to the photoresistor 

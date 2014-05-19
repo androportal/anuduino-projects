@@ -1,4 +1,5 @@
-/*
+/*@Author_Nivedita Tigadi.
+
  * A simple programme that will change the intensity of
  * an LED based  * on the amount of light incident on 
  * the photo resistor.

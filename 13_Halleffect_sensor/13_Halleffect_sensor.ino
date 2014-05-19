@@ -1,4 +1,5 @@
 /*
+ @Author_Nivedita Tigadi.
  Hall Effect Switch
  
  Turns on and off a light emitting diode(LED) connected to digital  

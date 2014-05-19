@@ -1,4 +1,6 @@
-
+//
+@Author_Nivedita Tigadi.
+//
 int ledPin = 1;      // LED connected to port 1
 int analogPin = 2;   // potentiometer connected to adc 2
 int val = 0;         // variable to store the read value

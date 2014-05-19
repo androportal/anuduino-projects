@@ -1,3 +1,5 @@
+//@Author_Nivedita Tigadi.//
+
 int pirPin = 1;    //the digital pin connected to the PIR sensor's output
 int ledPin = 0;
 

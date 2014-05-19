@@ -1,7 +1,8 @@
+ 	//@Author_Nivedita Tigadi.//
 
 	int motorPin = 0;  // define the pin the motor is connected to
                   
-	/*
+	/* 
 	 * setup() - this function runs once when you turn your Anuduino on
 	 * We set the motors pin to be an output (turning the pin high (+5v) or low (ground) (-))
 	 * rather than an input (checking whether a pin is high or low)
