@@ -1,5 +1,6 @@
 // this sketch reads data from thermistor and takes average of 30 samples in 4 seconds
-@Author_Nivedita Tigadi//
+//@Author_Nivedita Tigadi
+//
 
 #include <DigiUSB.h>
 #define TEMP 1 //using PB2 as analog INPUT
