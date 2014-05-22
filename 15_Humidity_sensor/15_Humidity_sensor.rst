@@ -50,8 +50,8 @@ Code
 
 
 	// this sketch reads data from humidity sensor and takes average of 30 samples in 4 seconds
-	//@Author_Nivedita Tigadi
-	//
+	//@Author_Nivedita Tigadi//
+	
 	
 	
 	#include <DigiUSB.h>
