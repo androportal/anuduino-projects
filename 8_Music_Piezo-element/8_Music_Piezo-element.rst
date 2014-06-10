@@ -43,8 +43,7 @@ code
 .. code-block::  c
 
 
-	/*@Author_Nivedita Tigadi.
-	   Melody
+	/* Melody
  	* (cleft) 2005 D. Cuartielles for K3
  	*
  	* This example uses a piezo speaker to play melodies.  It sends
