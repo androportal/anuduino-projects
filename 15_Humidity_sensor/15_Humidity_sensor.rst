@@ -8,9 +8,10 @@ Overview of the experiment
 The DHT11 is interfaced with Anuduino in this experiment. 
 Here the humidity sensor is conncted to analog pin 2 of Attin85. The 
 circuit is connected on breadboard as shown in the below figures.
-and The circuit is connected to the computer through USB. The values 
-are observed on monitor by using DigiUSB. The DHT11 
-reads humidity values from pin 2 and displays on the monitor of computer. 
+and The circuit is connected to the computer through USB. The temperature
+values are observed on monitor by using DigiUSB. we can Watch both
+temperature and humidity by interfacing bluetooth with this circuit. 
+Code is different for that which is mentioned below.
 
 
 
@@ -42,8 +43,8 @@ Circuit diagram
 
 
 
-Code
-----
+Code_1
+------
 
 
 .. code-block::  c
@@ -98,9 +99,69 @@ Code
 	DigiUSB.delay(990);
 
 	}
+	
+	
+Code_2
+------
+
+	
+.. code-block::  c
 
 
+    #include <dht11.h>
+    #include <SoftSerial.h>
+    #include <TinyPinChange.h>
+    
+    SoftSerial blue(0,1);
 
+    dht11 DHT11;
+
+    #define DHT11PIN 2
+
+    void setup()
+    {
+      Serial.begin(9600);
+      blue.begin(9600);
+      //blue.println("DHT11 TEST PROGRAM ");
+      //blue.print("LIBRARY VERSION: ");
+      //blue.println(DHT11LIB_VERSION);
+      //blue.println();
+    }
+    
+    double Fahrenheit(double celsius)
+    {
+      return 1.8 * celsius + 32;
+    }
+    
+    void loop()
+    {
+      //blue.println("\n");
+    
+      int chk = DHT11.read(DHT11PIN);
+    
+      blue.print("Read sensor: ");
+      switch (chk)
+      {
+        case 0: blue.println("OK"); break;
+        case -1: blue.println("Checksum error"); break;
+        case -2: blue.println("Time out error"); break;
+        default: blue.println("Unknown error"); break;
+      }
+    
+      blue.print("Humidity (%): ");
+      blue.println((float)DHT11.humidity, 2);
+    
+      blue.print("Temperature (oC): ");
+      blue.println((float)DHT11.temperature, 2);
+    
+      //blue.print("Temperature (oF): ");
+      //blue.println(Fahrenheit(DHT11.temperature), 2);
+    
+
+      delay(2000);
+    }
+    
+    
 
 
 

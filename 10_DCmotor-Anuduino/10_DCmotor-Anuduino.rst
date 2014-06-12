@@ -45,7 +45,7 @@ Code
 .. code-block::  c
 
 
-    //@Author_Nivedita Tigadi.//
+  
     
 	int motorPin = 0;  // define the pin the motor is connected to
                   

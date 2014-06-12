@@ -4,6 +4,12 @@ Relay-Anuduino
 Overview of the experiment
 --------------------------
 
+In this experiment we are interfacing relay with anuduino. we are
+using a transistor to drive current for relay. Whenever relay gets
+energized it will ON LED connected to it at the NO pin and when it 
+gets de-energized it will turn OFF LED. we can use it for larger loads
+also. we have to choose a proper relay.
+
 
 Components required
 -------------------
@@ -42,7 +48,7 @@ Code
 
 
      // @Author_Nivedita Tigadi.
-     //the setup routine runs once when you press reset://
+     //the setup routine runs once when you press reset:
      
     void setup()
      {   

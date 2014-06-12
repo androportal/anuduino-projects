@@ -20,10 +20,7 @@ void setup()
 {
   pinMode(ledPin, OUTPUT); //sets the led pin to output
 }
- /*
- * loop() - this function will start after setup 
- * finishes and then repeat
- */
+ 
 void loop()
 {
  int lightLevel = analogRead(lightPin); //Read the

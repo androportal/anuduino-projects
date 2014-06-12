@@ -1,5 +1,5 @@
 //@Author_Nivedita Tigadi.
-//
+
 
 int analogPin = 3;   // potentiometer connected to adc 3
 int val = 0;         // variable to store the read value

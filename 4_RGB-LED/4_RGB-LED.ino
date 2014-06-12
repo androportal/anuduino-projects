@@ -1,4 +1,4 @@
-//@Author_Nivedita Tigadi.
+
 
 /*     ---------------------------------------------------------
  *     |  Experimentation Kit for Anuduino Example Code         |
