@@ -1,0 +1,25 @@
+<!-- {{left_sidebar_enabled,right_sidebar_enabled=False,('message' in globals())}} -->
+{{extend 'layout.html'}}
+
+<center>
+<table>
+{{#=x}}
+    
+{{for light in lights:}}
+<tr>
+    {{=TD(light.Name_of_device)}}
+    {{if light.State:}}
+    {{=TD(A(IMG (_src="/buttons/static/images/on.jpg",_width="75",_height="75") , _href=URL("toggle", args=light.id)))}}
+    {{else:}}
+    {{=TD(A(IMG (_src="/buttons/static/images/off.jpg",_width="75",_height="75") , _href=URL("toggle", args=light.id)))}}
+    {{pass}}
+    {{=TD(A("edit", _class='small', _href=URL("data/update/lights", args=light.id)),_class='bottom')}}
+</tr>
+    {{pass}}
+
+    {{=TR(TD(A("add",_class="small",_href=URL('data/create/lights'))))}}
+	{{#=TR(TD(A("All ON",_class="btn",_href=URL('allon'))),TD(A("All OFF",_class='btn', _href=URL('alloff'))))}}
+
+    
+</table>
+</center>

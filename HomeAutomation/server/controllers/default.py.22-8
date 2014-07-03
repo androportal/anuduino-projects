@@ -1,0 +1,103 @@
+# -*- coding: utf-8 -*-
+
+import os
+import time
+
+def give_me_time():
+    auth.basic()
+    if auth.user:
+        return time.ctime()
+    else:
+        return 'Not authorized'
+
+def check_form():
+    if form.vars.unique_home_id_by_client_machine==str(auth.unique_home_id):
+        return True
+    else:
+        return False
+
+def hello():
+    form=SQLFORM.factory(Field('unique_home_id_by_client_machine')).process()
+    print auth.user_id
+    a=db(db.auth_user.id==auth.user_id).select()
+    #if form.vars.unique_home_id_by_client_machine==db((db.auth_user.unique_home_id)):
+    #if auth.user_id==str(auth.unique_home_id):
+  #      session.flash = 'record inserted'
+    return dict(form=form,
+                b=str(form.vars.unique_home_id_by_client_machine),
+              #  c=db(auth_user.unique_home_id)
+                )
+
+
+
+   # if form.accepted:h
+#        if row.user_id==str(auth.unique_home_id):
+
+@auth.requires_login()
+def index():
+    lights = db().select(db.lights.ALL, orderby=db.lights.id)
+    #form=SQLFORM.factory(Field('type_of_machine')).process()
+    #if form.accepted:
+    #   redirect(URL('other', vars={'type_of_machine':form.vars.type_of_machine}))
+    #return dict(lights=lights)
+    return locals()
+
+@auth.requires_login()
+def other():
+    lights = db().select(db.lights.ALL, orderby=db.lights.id)
+    x=request.args
+    #light_off=URL('other', args=[request.args(0,cast=str),str(light.State)])
+    return dict(lights=lights)
+
+@auth.requires_login()
+@request.restful()
+def api():
+   def GET(s):
+        if s=='get_status':
+            return 'asked get_status'
+        elif s=='submit_response':
+            return 'submitting response'
+        else:
+            return 'blocked'
+   return locals()
+
+@auth.requires_login()
+def toggle():
+    light = db(db.lights.id==request.args(0,cast=int)).select().first()
+    if light.State:
+       light.update_record(State = False)
+       button_now=light.State
+       #args=[request.args(0,cast=str),str(button_now)]
+       redirect(URL('index', args=[request.args(0,cast=str),str(button_now)]))
+       #URL('other', args=[request.args(0,cast=str),str(button_now)])
+    else:
+        light.update_record(State = True)
+        button_now=light.State
+        #args=[request.args(0,cast=str),str(button_now)]
+        redirect(URL('index', args=[request.args(0,cast=str),str(button_now)]))
+        #URL('other', args=[request.args(0,cast=str),str(button_now)])
+        
+    db.commit()
+    #return redirect(URL('index'))
+    return URL('index', args=[request.args(0,cast=str),str(button_now)])
+
+
+def user():
+    return dict(form=auth())
+
+@auth.requires_login()
+def data():
+    """
+    http://..../[app]/default/data/tables
+    http://..../[app]/default/data/create/[table]
+    http://..../[app]/default/data/read/[table]/[id]
+    http://..../[app]/default/data/update/[table]/[id]
+    http://..../[app]/default/data/delete/[table]/[id]
+    http://..../[app]/default/data/select/[table]
+    http://..../[app]/default/data/search/[table]
+    but URLs must be signed, i.e. linked with
+      A('table',_href=URL('data/tables',user_signature=True))
+    or with the signed load operator
+      LOAD('default','data.load',args='tables',ajax=True,user_signature=True)
+    """
+    return dict(form=crud())

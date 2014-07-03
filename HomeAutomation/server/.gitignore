@@ -1,0 +1,9 @@
+# .gitignore
+*.*~
+*.orig
+errors/
+databases/
+progress.log
+*.bak
+*.pyc
+
