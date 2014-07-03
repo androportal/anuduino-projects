@@ -5,35 +5,30 @@ Two DCmotors spinning
 Overview of the experiment
 --------------------------
 
-We are done with the single DCmotor. Now we are going to take two DCmotors.
-In this experiment we are spinning two DCmotors,One in forward direction
-and other in reverse direction. Similar circuit we are going to bulid here 
-as we did for single DCmotor, and here we are using two transistors,two diodes
-and two resistors.
+The spinning of the motors in forward as well as backward direction can also be achieved using the L293d motor driver. The L293d is a dual H-bridge motor driver integrated circuit which can control a set of two DC motors simultaneously in any direction. In this experiment, we are rotating the motors both in forward, both in backward and one forward-one backward directions. If these two motors are used on a robot, one can achieve forward, backward as well as circular motion of the robot. The code here achieves each type of motion for 8 seconds with 2 second breaks between each. The time periods are obtained by using the delay function.
 
 
 Components required
 -------------------
 
-- Breadboard         x1
-- Attiny85           x1
-- Diode(1N4001)      x2
-- Resistor(2.2k)     x1
-- Transistor(2N2222) x2
-- Dcmotor            x2
-- powesupply(5v)
+- Breadboard             x1
+- Attiny85               x1 
+- L293d-motor-driver IC  x1 
+- Dcmotor                x2
+- powersupply(5v)        x1
+- powersupply(12v)       x1
 
 
 Schematic
---------
+---------
 
-.. image:: ../images/11_Two-DCmotors_schem.png
+.. image:: ../images/11_Two-Dcmotors_schem.png
 
 
 Circuit Diagram
 ---------------
 
-.. image:: ../images/11_Two-DCmotors_bb.png
+.. image:: ../images/11_Two-Dcmotors_bb.png
 
 
 Code
@@ -41,35 +36,77 @@ Code
 
 .. code-block:: c
 
-    // @Author_Nivedita Tigadi.
-	
-	
-	//@Author_Nivedita Tigadi
-
-
-    const int motorForward = 0;  //pin for running motor1 in forward direction
-    const int motorReverse = 1;   //pin for running motor2 in reverse direction
-
+    // @Author_Nivedita Tigadi, Piyush Mahajan, Samridha Kumar
+    //2014_Internship IIT-Bombay.
+    
+    
     void setup()
     {
-      pinMode(motorForward, OUTPUT);  
-      pinMode(motorReverse, OUTPUT);  
-    }
-    
-    void loop() {
-    digitalWrite(motorForward, HIGH);    //motor1 runs in forward direction
-    delay(1000);							     //waits for a second
-    digitalWrite(motorForward, LOW);   //motor1 stops
-    delay(1000);							    //and waits for one second
- 
-    digitalWrite(motorReverse, HIGH);  //motor2 runs in reverse direction
-    delay(1000);							  //waits for a second
-    digitalWrite(motorReverse, LOW);  //motor2 stops
-    delay(1000);							  //waits for a second
- 
+  pinMode(0,OUTPUT);
+  pinMode(1,OUTPUT);
+  pinMode(2,OUTPUT);
+  pinMode(3,OUTPUT);
+  pinMode(4,OUTPUT);
+  pinMode(5,OUTPUT);  
     }
 
+    void loop()
+    {
+  movefront();
+  delay(2000);
+  circular();
+  delay(2000);
+  moveback();
+  delay(2000);
+    }
 
+    void movefront()
+    {
+  digitalWrite(0,LOW);
+  digitalWrite(1,LOW);
+  digitalWrite(2,HIGH);
+  digitalWrite(3,LOW);
+  digitalWrite(5,HIGH);
+  digitalWrite(4,LOW);
+  digitalWrite(0,HIGH);
+  digitalWrite(1,HIGH);
+  delay(8000);
+  digitalWrite(0,LOW);
+  digitalWrite(1,LOW);
+    }
+
+    void moveback()
+    {
+  digitalWrite(0,LOW);
+  digitalWrite(1,LOW);
+  digitalWrite(2,HIGH);
+  digitalWrite(3,LOW);
+  digitalWrite(4,HIGH);
+  digitalWrite(5,LOW);
+  digitalWrite(0,HIGH);
+  digitalWrite(1,HIGH);
+  delay(8000);
+  digitalWrite(0,LOW);
+  digitalWrite(1,LOW);
+    }
+
+    void circular()
+    {
+  digitalWrite(0,LOW);
+  digitalWrite(1,LOW);
+  digitalWrite(3,HIGH);
+  digitalWrite(2,LOW);
+  digitalWrite(4,HIGH);
+  digitalWrite(5,LOW);
+  digitalWrite(0,HIGH);
+  digitalWrite(1,HIGH);
+  delay(8000);
+  digitalWrite(0,LOW);
+  digitalWrite(1,LOW);
+    }
+
+	
+	
 
 
 
