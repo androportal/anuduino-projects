@@ -1,12 +1,8 @@
 #!/usr/bin/python
 
 """
-This script acts as a bridge between server and master module
-connected through serial. For more details follows instructions
-in `docs` directory.
-
 Storyboard:
-Check continously `url_on_off` with 1s interval.
+Check continously `url_on_off` with 0.5s interval.
 
 When on/off receives instruction,should stop checking `url_on_off`
 and send the code to master module through serial, and must send
@@ -37,12 +33,13 @@ serial_port = find_serial()
 awrite = serial.Serial(serial_port,19200,timeout=2)
 sleep(2)
 
-u='username' # username created at login time
-p='xxxxx'    # must not be entered in plane text
+u='srikant'
+p='12345'
 
 previous_on_off_status='FIRST_TIME'
 
 #url_on_off='http://127.0.0.1:8000/buttons/default/api/on_off'
+#url_on_off='http://192.168.43.156:8000/buttons/default/api/on_off'
 url_on_off='https://10.101.11.108:8001/buttons/default/api/on_off'
 url_on_off_ack='http://127.0.0.1:8000/buttons/default/api/ack-ccc9'
 url_update_status='http://127.0.0.1:8000/buttons/default/api/status'
@@ -60,16 +57,19 @@ def server2master_master2slave_return_ack(present_on_off_status):
        print present_on_off_status, '1'
        turnOff_string = present_on_off_status.strip('False') + '9'
        print turnOff_string
-       for each in range(1,4):
+       for each in range(1,3):
            awrite.writelines(turnOff_string)
            print turnOff_string, '1'
            off_ack_string = awrite.readlines()
-           print off_ack_string[1].strip('\r\n'), '3',present_on_off_status.strip('False') + '1'
-           if off_ack_string[1].strip('\r\n') == (present_on_off_status.strip('False') + '1'):
-               print off_ack_string, '4'
+           if len(off_ack_string) is 2:
+               stripped_off_ack = off_ack_string[1].strip('\r\n')
+           else:
+               stripped_off_ack= 'N'
+ #          print off_ack_string[1].strip('\r\n'), '3',present_on_off_status.strip('False') + '1'
+           if stripped_off_ack == (present_on_off_status.strip('False') + '1'):
+               print stripped_off_ack, '4'
                return off_ack_string[1].strip('\r\n')
                break
-
 
     elif 'True' in present_on_off_status:
        serial_port = find_serial()
@@ -81,9 +81,13 @@ def server2master_master2slave_return_ack(present_on_off_status):
        for each in range(1,4):
            awrite.writelines(turnOn_string)
            on_ack_string = awrite.readlines()
-           print on_ack_string[1].strip('\r\n'), '3',present_on_off_status.strip('True') + '3'
-           if on_ack_string[1].strip('\r\n') == (present_on_off_status.strip('True') + '3'):
-              print on_ack_string, '4'
+           if len(on_ack_string) is 2:
+               stripped_on_ack = on_ack_string[1].strip('\r\n')
+           else:
+               stripped_on_ack= 'N'
+   #         print on_ack_string[1].strip('\r\n'), '3',present_on_off_status.strip('True') + '3'
+           if stripped_on_ack == (present_on_off_status.strip('True') + '3'):
+              print stripped_on_ack, '4'
               return on_ack_string[1].strip('\r\n')
               break
 
